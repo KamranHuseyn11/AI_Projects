@@ -1,0 +1,43 @@
+The Code is written in Python language.
+
+This code uses AC3 and Heuristics (MRV,LCV) to solve a Constraint Search Problem of graph coloring.
+
+
+functions are: 
+1. Initializing functions - to read inpt file, and initiate all needed structures (variables,domains,node_to_color_map etc.)
+
+2. MRV and LVC - mrv selects next node and lvc orders colors in asciending order of their constraining value for the selected node.
+
+3. NO_Collision - checks if selected node with selected color collides with any adjacent vertex, 
+return False, if we cannot assign color to selected vertex, return True, otherwise.
+
+4.AC3 and compare_remove_values - AC3 does forward checking until there is no more vertex pairs to check for arc consistency. 
+calls compare_remove_values in while loop to remove incostent values from domains of vertex. if there is any value removed, AC3 updates deque by adding new pairs of vertices.
+
+5. Backtracing and CSP: CSP prints the output, also calls recursive Backtracking function to solve the problem. 
+
+
+
+INPUT:
+you input path to file to run the code. such as ./input1.txt
+
+OUTPUT:
+output has a structure as following:
+
+------------------------------------
+result:
+
+vertex: number of vertex, color: assigned color to vertex
+vertex: number of vertex, color: assigned color to vertex
+...
+...
+
+number of vertices:
+
+runtime:
+
+----------------------------------------------------------
+
+if no soltion output will print "No Solution"
+
+You can either use py ot ipynb file to run the code. simple python name.py in command line runs the code.
